@@ -9,7 +9,7 @@ on:
 
 jobs:
   security_gate:
-    uses: naouaichRepo/all-reusables-workflows/.github/workflows/security-reusable-gate.yml@v1
+    uses: naouaichRepo/all-reusables-workflows/.github/workflows/security-reusable-gate.yml@v3
     with:
       security-level: "MIN"
       is-blocking: false
