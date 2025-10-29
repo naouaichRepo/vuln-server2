@@ -20,4 +20,8 @@ jobs:
       - name: 🧪 List files 1
         run: ls -la
 
+      - name: 📥 Checkout du code
+        uses: actions/checkout@v4
 
+      - name: 🧪 List files 2
+        run: ls -la
