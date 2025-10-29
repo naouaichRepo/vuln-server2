@@ -1,0 +1,23 @@
+name: Hello World (Self-Hosted)
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - preprod
+
+jobs:
+  semgrep: 
+    runs-on: self-hosted
+    permissions:
+      id-token: write
+      contents: read
+      security-events: write
+      actions: read
+    
+    steps:
+      - name: 🧪 List files 1
+        run: ls -la
+
+
