@@ -27,12 +27,12 @@ jobs:
         run: ls -la
 
       - name: 📦 Install trivy
-        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin v0.67.2
+        run: brew install trivy
       
       - name: 🆔 Generate unique and random string for unique file naming
         run: echo "UNIQ_STR=$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | head -c 30)" >> "$GITHUB_ENV"
 
-      - name: Run semgrep for scan high vulnerabilities levels and add severity result in report
+      - name: Run Trivy for scan high vulnerabilities levels and add severity result in report
         run: |
           trivy fs --scanners vuln,secret,config . --format sarif --output output-${UNIQ_STR}.json
       
