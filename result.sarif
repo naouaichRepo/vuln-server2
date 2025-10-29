@@ -1,0 +1,874 @@
+{
+	"version": "2.1.0",
+	"$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+	"runs": [
+		{
+			"tool": {
+				"driver": {
+					"name": "Nuclei",
+					"organization": "ProjectDiscovery",
+					"product": "Nuclei",
+					"shortDescription": {
+						"text": "Fast and Customizable Vulnerability Scanner"
+					},
+					"fullDescription": {
+						"text": "Fast and customizable vulnerability scanner based on simple YAML based DSL"
+					},
+					"fullName": "Nuclei v3.4.10",
+					"semanticVersion": "v3.4.10",
+					"downloadUri": "https://github.com/projectdiscovery/nuclei/releases",
+					"rules": [
+						{
+							"id": "external-service-interaction",
+							"name": "External Service Interaction",
+							"shortDescription": {
+								"text": "External Service Interaction (external-service-interaction) found on localhost:3000"
+							},
+							"fullDescription": {
+								"text": "External Service interaction via Host Header Injection.\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "node-express-dev-env",
+							"name": "Node.js Express NODE_ENV Development Mode",
+							"shortDescription": {
+								"text": "Node.js Express NODE_ENV Development Mode (node-express-dev-env) found on localhost:3000"
+							},
+							"fullDescription": {
+								"text": "The Node.js application runs in development mode, which can expose sensitive information, such as source code and secrets, depending on the application.\n\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "5",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "snmpv3-detect",
+							"name": "SNMPv3 Fingerprint - Detect",
+							"shortDescription": {
+								"text": "SNMPv3 Fingerprint - Detect (snmpv3-detect) found on localhost:3000"
+							},
+							"fullDescription": {
+								"text": "SNMPv3 can leak information about the device even without proper authentication.Use `nmap -sU \u003cADDRESS\u003e -p 161 --script snmp-info` to get more information.Engine IDs can help to determine one device with multiple interfaces.\n\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "exposed-file-upload-form",
+							"name": "Exposed File Upload Form",
+							"fullDescription": {
+								"text": "\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "form-detection",
+							"name": "Form Detection",
+							"shortDescription": {
+								"text": "Form Detection (form-detection) found on localhost:3000"
+							},
+							"fullDescription": {
+								"text": "A template to detect HTML Forms in page response.\n\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "tech-detect",
+							"name": "Wappalyzer Technology Detection",
+							"fullDescription": {
+								"text": "\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "http-missing-security-headers",
+							"name": "HTTP Missing Security Headers",
+							"shortDescription": {
+								"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+							},
+							"fullDescription": {
+								"text": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "options-method",
+							"name": "Allowed Options Method",
+							"fullDescription": {
+								"text": "\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						},
+						{
+							"id": "caa-fingerprint",
+							"name": "CAA Record",
+							"shortDescription": {
+								"text": "CAA Record (caa-fingerprint) found on localhost"
+							},
+							"fullDescription": {
+								"text": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.\nMore details at\n\n"
+							},
+							"properties": {
+								"security-severity": "1",
+								"tags": [
+									"security"
+								]
+							}
+						}
+					]
+				}
+			},
+			"results": [
+				{
+					"ruleId": "external-service-interaction",
+					"rule": {
+						"id": "external-service-interaction",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "External Service Interaction (external-service-interaction) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "node-express-dev-env",
+					"rule": {
+						"id": "node-express-dev-env",
+						"toolComponent": {}
+					},
+					"level": "note",
+					"kind": "open",
+					"message": {
+						"text": "Node.js Express NODE_ENV Development Mode (node-express-dev-env) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "snmpv3-detect",
+					"ruleIndex": 1,
+					"rule": {
+						"id": "snmpv3-detect",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "SNMPv3 Fingerprint - Detect (snmpv3-detect) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "/",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "exposed-file-upload-form",
+					"ruleIndex": 2,
+					"rule": {
+						"id": "exposed-file-upload-form",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "Exposed File Upload Form (exposed-file-upload-form) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "form-detection",
+					"ruleIndex": 3,
+					"rule": {
+						"id": "form-detection",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "Form Detection (form-detection) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "tech-detect",
+					"ruleIndex": 4,
+					"rule": {
+						"id": "tech-detect",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "Wappalyzer Technology Detection (tech-detect) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "http-missing-security-headers",
+					"ruleIndex": 5,
+					"rule": {
+						"id": "http-missing-security-headers",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "HTTP Missing Security Headers (http-missing-security-headers) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "options-method",
+					"ruleIndex": 6,
+					"rule": {
+						"id": "options-method",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "Allowed Options Method (options-method) found on localhost:3000"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost:3000"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "//",
+									"description": {
+										"text": "localhost:3000"
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"ruleId": "caa-fingerprint",
+					"ruleIndex": 7,
+					"rule": {
+						"id": "caa-fingerprint",
+						"toolComponent": {}
+					},
+					"level": "none",
+					"kind": "open",
+					"message": {
+						"text": "CAA Record (caa-fingerprint) found on localhost"
+					},
+					"analysisTarget": {},
+					"webRequest": {
+						"body": {}
+					},
+					"webResponse": {
+						"body": {}
+					},
+					"locations": [
+						{
+							"message": {
+								"text": "localhost"
+							},
+							"physicalLocation": {
+								"address": {},
+								"artifactLocation": {
+									"uri": "/",
+									"description": {
+										"text": "localhost"
+									}
+								}
+							}
+						}
+					]
+				}
+			],
+			"invocations": [
+				{
+					"commandLine": "nuclei",
+					"arguments": [
+						"-u",
+						"http://localhost:3000/",
+						"-o",
+						"result.sarif",
+						"-json-export",
+						"result.json",
+						"-sarif-export",
+						"result.sarif"
+					],
+					"responseFiles": [
+						{
+							"uri": "file:///result.sarif",
+							"description": {
+								"text": "Nuclei Sarif Report"
+							}
+						}
+					],
+					"executionSuccessful": false,
+					"executableLocation": {},
+					"workingDirectory": {},
+					"stdin": {},
+					"stdout": {},
+					"stderr": {}
+				}
+			]
+		}
+	]
+}
