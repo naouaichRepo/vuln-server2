@@ -8,7 +8,7 @@ on:
       - preprod
 
 jobs:
-  semgrep: 
+  trivy: 
     runs-on: self-hosted
     permissions:
       id-token: write
