@@ -1,4 +1,4 @@
-name: Hello World (Self-Hosted)
+name: Security SAST scan (Self-Hosted)
 
 on:
   pull_request:
