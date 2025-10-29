@@ -343,3 +343,11 @@ app.get('/info', (req, res) => {
   }
 })();
 
+
+
+// === Unsafe template rendering (XSS demo) ===
+app.get('/templateeeee', (req, res) => {
+  const user = req.query.user || '<b>guest</b>';
+  const html = `<!doctype html><html><body><h1>Bonjour ${user}</h1></body></html>`;
+  res.send(html);
+});
