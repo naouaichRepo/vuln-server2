@@ -343,36 +343,3 @@ app.get('/info', (req, res) => {
   }
 })();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function harness(data){
-  const name = data;
-  const age = data;
-  async function test(name, age){
-    const query = `INSERT INTO users (name, password, role) VALUES ('${name}', 'pass123', 'user')`; // vulnérable
-    try {
-      await pool.query(query);
-      res.send(`Bonjour ${name}, vous avez ${age} ans.`);
-    } catch (err) {
-      console.error('DB error insert:', err.message);
-      res.status(500).send('Erreur DB');
-    }
-  }
-}
-
-harness(data)
