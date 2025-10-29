@@ -11,5 +11,5 @@ jobs:
   security_gate:
     uses: naouaichRepo/all-reusables-workflows/.github/workflows/security-reusable-gate.yml@v5
     with:
-      security-level: "MIN"
+      security-level: "MAX"
       is-blocking: false
