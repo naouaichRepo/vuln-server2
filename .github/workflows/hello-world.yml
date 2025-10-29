@@ -1,7 +1,7 @@
 name: Hello World (Self-Hosted)
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
