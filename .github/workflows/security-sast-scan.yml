@@ -25,3 +25,14 @@ jobs:
 
       - name: 🧪 List files 2
         run: ls -la
+
+      - name: 🧪 check python version
+        run: python3 --version
+        
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 🧪 check python version
+        run: python3 --version
