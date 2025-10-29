@@ -1,4 +1,4 @@
-name: Security SAST scan (Self-Hosted)
+name: Security SAST scan
 
 on:
   pull_request:
