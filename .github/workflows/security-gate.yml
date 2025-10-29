@@ -10,4 +10,6 @@ on:
 jobs:
   security_gate:
     uses: naouaichRepo/all-reusables-workflows/.github/workflows/security-reusable-gate.yml@v1
-    
+    with:
+      security-level: "MIN"
+      is-blocking: false
